@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#griglia {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+h1 {
+	color: #594f59;
+}
+
+.square {
+	width: 100px;
+	height: 100px; 
+	border: solid 1px #c49ec1;
+	background-color: #167247;
+}
+
+.bomb {
+	background-color: #721667;
+}
+
+.size-uno {
+	max-width: 1000px;
+}
+
+.size-due {
+	max-width: 900px;
+}
+
+.size-tre {
+	max-width: 700px;
+}
