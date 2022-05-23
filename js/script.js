@@ -2,15 +2,15 @@
 // in cui ogni cella contiene un numero tra quelli compresi in un range:
 
 // con difficoltà 1 => tra 1 e 100
-let livelloFacile = document.getElementById("primoLivello");
+const livelloFacile = document.getElementById("primoLivello");
 livelloFacile.addEventListener("click",() => creagriglia(100, "size-uno"));
 
 // con difficoltà 2 => tra 1 e 81
-let livelloIntermedio = document.getElementById("secondoLivello");
+const livelloIntermedio = document.getElementById("secondoLivello");
 livelloIntermedio.addEventListener("click",() => creagriglia(size, "size-due"));
 
 // con difficoltà 3 => tra 1 e 49
-let livelloDifficile = document.getElementById("terzoLivello");
+const livelloDifficile = document.getElementById("terzoLivello");
 livelloDifficile.addEventListener("click",() => creagriglia(size, "size-tre", ));
 
 
@@ -26,10 +26,9 @@ function creagriglia(size, position, randomNumber){
             crea.append(arrmyItem);
             crea.addEventListener("click",
                 () => {
-                        if (MyBomb.includes(arrmyItem)) {
+                        if (divElBomb.includes(arrmyItem)) {
                             crea.classList.add(".bomb");
                             document.querySelector("h3").innerHTML = "Hai totalizzato " + punti + " punti";
-                            var imageParent = document.querySelector(".bomb");
                             image.className = ".bomb";
 
                         } else {
@@ -46,7 +45,6 @@ function creagriglia(size, position, randomNumber){
 
     divEl.className = "square";
     
-
     divEl.addEventListener("click", () => divEl.style.backgroundColor = "rgb(126, 194, 231)");
     divElBomb.addEventListener("click", () => divEl.style.backgroundColor = "rgb(179, 49, 113)");
 
