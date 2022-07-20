@@ -1,65 +1,11 @@
-// // L’utente indica un livello di difficoltà in base al quale viene generata una griglia di gioco quadrata, 
-// // in cui ogni cella contiene un numero tra quelli compresi in un range:
-
-// // con difficoltà 1 => tra 1 e 100
-// const livelloFacile = document.getElementById("primoLivello");
-// livelloFacile.addEventListener("click",() => creagriglia(100, "size-uno"));
-
-// // con difficoltà 2 => tra 1 e 81
-// const livelloIntermedio = document.getElementById("secondoLivello");
-// livelloIntermedio.addEventListener("click",() => creagriglia(, "size-due"));
-
-// // con difficoltà 3 => tra 1 e 49
-// const livelloDifficile = document.getElementById("terzoLivello");
-// livelloDifficile.addEventListener("click",() => creagriglia(size, "size-tre", ));
-
-
-// function creagriglia(size, position, randomNumber){
-
-//     // const grigliaEl = Math.floor(Math.random() * randomNumber) + 1;
-//     const grigliaEl = document.getElementById("griglia");
-//     grigliaEl.innerHTML = ''; 
-//     grigliaEl.className = position ;
-//     for (let i = 0; i < size; i++){
-//             crea.addEventListener("click",
-//                 () => {
-//                         if (divElBomb.includes(arrmyItem)) {
-//                             crea.classList.add(".bomb");
-//                             document.querySelector("h3").innerHTML = "Hai totalizzato " + punti + " punti";
-//                             image.className = ".bomb";
-
-//                         } else {
-//                             crea.classList.add("Click");
-//                             punti+=10;
-//                         }
-//                 }
-//             )
-
-//     const divEl = document.createElement("div");
-//     const divElBomb = document.createElement("div");
-
-//     divEl.className = "square";
-    
-//     divEl.addEventListener("click", () => divEl.style.backgroundColor = "rgb(126, 194, 231)");
-//     divElBomb.addEventListener("click", () => divEl.style.backgroundColor = "rgb(179, 49, 113)");
-
-//     grigliaEl.append(divEl);
-    
-//     }
-    
-// }
-
-
-
-
 // L’utente indica un livello di difficoltà in base al quale viene generata una griglia di gioco quadrata
 
-//Pulsante Play e contatore partite
+//Pulsante Play e conteggio partita
 const play = document.getElementById("play");
 play.addEventListener("click", start);
 let playCounter = 0;
 
-//Variabile griglia, dimensione griglia e array bombe
+//Variabile griglia, 
 const griglia = document.getElementById("griglia");
 let grigliaDim = 0;
 let bombsArray = [];
@@ -235,7 +181,7 @@ function outcomeManager(outcomeContainer, outcome) {
     }
 }
 
-//Rivelatore di bombe, controlla se ciascun grigliaSquare è una bomba e nel caso lo sia e non sia stata cliccata gli da la classe "unexploded"
+//Rivelatore di bombe, controlla se ciascun grigliaSquare è una bomba e nel caso lo sia e non sia stata cliccata gli da la classe "unexplodedb"
 function bombsReveal() {
     for (let i = 1; i <= grigliaDim; i++) {
         let tempgrigliaSquare = document.querySelector(".griglia-square-" + i);
@@ -245,10 +191,7 @@ function bombsReveal() {
                 continue;
             }
 
-            tempgrigliaSquare.classList.add("unexploded");
+            tempgrigliaSquare.classList.add("unexplodedb");
         }
     }
 }
-
-//todo: non dare numero alla classe usando array query selector all
-//todo usare una addxClass sola
